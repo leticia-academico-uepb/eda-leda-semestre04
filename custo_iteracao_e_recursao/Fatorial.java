@@ -12,4 +12,12 @@ public class Fatorial {
         return fatorial;
     }
 
+    public static long fatorialRecursivo(int valor) {
+        if (valor == 0) {
+            return 1;
+        } else {
+            return valor * fatorialRecursivo(valor - 1);
+        }
+    }
+
 }
