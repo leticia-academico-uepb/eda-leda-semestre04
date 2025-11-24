@@ -2,6 +2,22 @@ package custo_iteracao_e_recursao;
 
 public class Busca {
 
+    public static void main(String[] args) {
+        int[] array = {0, 3, 8, 3, 9, 13};
+
+        // System.out.println(Busca.linearIterativa(array, 9));
+        // System.out.println(Busca.linearIterativa(array, 7));
+
+        // System.out.println(Busca.linearRecursiva(array, 0));
+        // System.out.println(Busca.linearRecursiva(array, 7));
+
+        System.out.println(Busca.binariaIterativa(array, 13));
+        System.out.println(Busca.binariaIterativa(array, 7));
+
+        System.out.println(Busca.binariaRecursiva(array, 13));
+        System.out.println(Busca.binariaRecursiva(array, 7));
+    }
+
     public static int linearIterativa(int[] vetorA, int valorBuscado) {
 
         for (int i = 0; i < vetorA.length; i++) {
