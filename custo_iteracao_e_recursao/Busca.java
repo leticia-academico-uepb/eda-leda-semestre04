@@ -50,4 +50,29 @@ public class Busca {
         return -1;
     }
 
+    public static int binariaRecursiva(int[] vetorA, int valorBuscado, int inicio, int fim) {
+        if (inicio > fim) {
+            return -1;
+        }
+
+        int meio = inicio + (fim - inicio) / 2;
+
+        if (vetorA[meio] == valorBuscado) {
+            return meio;
+        }
+
+
+        if (vetorA[meio] < valorBuscado) {
+            inicio = meio + 1;
+        } else {
+            fim = meio - 1;
+        }
+
+        return binariaRecursiva(vetorA, valorBuscado, inicio, fim);
+    }
+
+    public static int binariaRecursiva(int[] vetorA, int valorBuscado) {
+        return binariaRecursiva(vetorA, valorBuscado, 0, vetorA.length - 1);
+    }
+
 }
