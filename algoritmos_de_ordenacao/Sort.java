@@ -15,4 +15,26 @@ public class Sort {
         }
 
     }
+
+    public static void bubbleOtimizado(int[] vetorA, int n) {
+
+        boolean trocou;
+        for (int i = 0; i < n - 1; i++) {
+
+            trocou = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (vetorA[j] > vetorA[j + 1]) {
+                    Utils.troca(vetorA, j, j + 1);
+                    trocou = true;
+
+                    Utils.imprimir(vetorA);
+                }
+            }
+
+            if (!trocou)
+                break;
+        }
+
+    }
+
 }
